@@ -25,6 +25,9 @@
     .logo img {
       max-width: 180px;
       margin-bottom: 20px;
+      display: block;
+      margin-left: auto;
+      margin-right: auto;
     }
 
     h1 {
@@ -67,11 +70,51 @@
       font-weight: bold;
       color: #3583c3;
     }
-    
+
     .illustration img {
-      max-width: 80%;
+      width: 100%;
+      max-width: 300px;
+      height: auto;
       border-radius: 10px;
-      margin-bottom: 20px;
+      margin: 0 auto 20px auto;
+      display: block;
+    }
+
+    /* Responsive styles for mobile */
+    @media (max-width: 600px) {
+      body {
+        padding: 20px;
+      }
+
+      .container {
+        padding: 20px;
+        width: 100%;
+        box-sizing: border-box;
+      }
+
+      h1 {
+        font-size: 18px;
+      }
+
+      input[type="number"] {
+        font-size: 16px;
+        padding: 10px;
+      }
+
+      button {
+        font-size: 14px;
+        padding: 10px 16px;
+      }
+
+      .results p {
+        font-size: 15px;
+      }
+
+      .logo img, .illustration img {
+        width: 100%;
+        height: auto;
+        margin-bottom: 20px;
+      }
     }
   </style>
 </head>
@@ -80,9 +123,9 @@
     <div class="logo">
       <img src="https://scontent-maa2-1.xx.fbcdn.net/v/t39.30808-6/468534038_122179576556128343_3105970904216675892_n.jpg?stp=dst-jpg_s960x960_tt6&_nc_cat=105&ccb=1-7&_nc_sid=cc71e4&_nc_ohc=-D557gM3DmkQ7kNvwGvO1ll&_nc_oc=Adl9IxXOAsT58iAzN6kjvm6vvoraa_Yfxv_qRwwjaAIZlqgJj8tI9E6lsrpEchsmLQ0&_nc_zt=23&_nc_ht=scontent-maa2-1.xx&_nc_gid=XemWqjaCJgRMt3utPYWo4g&oh=00_AfS5TsWQgqundHquIqRrKVwXieO0PLrCaLuOOkoP8auu2Q&oe=688F8CA7" alt="Company Logo" />
     </div>
-    
+
     <div class="illustration">
-      <img src="https://img.freepik.com/free-vector/calculator-floating-cartoon-vector-icon-illustration-finance-business-icon-concept-isolated-flat_138676-9297.jpg?t=st=1753861501~exp=1753865101~hmac=d689d4204fdaf12f43629d1e758a45d2258f208b182fd716dadb0d71d0bb4381&w=1480" alt="Budget Planning Illustration" style="max-width: 300px; height: auto; display: block; margin: 0 auto 20px auto;" />
+      <img src="https://img.freepik.com/free-vector/calculator-floating-cartoon-vector-icon-illustration-finance-business-icon-concept-isolated-flat_138676-9297.jpg?t=st=1753861501~exp=1753865101~hmac=d689d4204fdaf12f43629d1e758a45d2258f208b182fd716dadb0d71d0bb4381&w=1480" alt="Budget Planning Illustration" />
     </div>
 
     <h1><center>Income Tax Calculator - Your Smart Choice in Seconds</center></h1>
@@ -92,7 +135,7 @@
     <div class="results" id="output" style="display:none;">
       <p>Old Regime: <span class="highlight">₹<span id="oldTax">0</span></span></p>
       <p>New Regime: <span class="highlight">₹<span id="newTax">0</span></span></p>
-      <p>Your best choice: <span class="highlight" id="better"style="color:#4CAF50">-</span></p>
+      <p>Your best choice: <span class="highlight" id="better" style="color:#4CAF50">-</span></p>
       <p id="difference" style="color:#000000;font-weight:bold;"></p>
     </div>
   </div>
